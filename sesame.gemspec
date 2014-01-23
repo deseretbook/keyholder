@@ -8,9 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Sesame::VERSION
   spec.authors       = ["Tim"]
   spec.email         = ["thogg4@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/deseretbook/sesame"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
