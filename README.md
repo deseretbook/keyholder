@@ -25,11 +25,17 @@ You will need to set up an authenticating record in the app you want to hit and 
 A request will look like this:
 ```
 http://apihost.com/endpoint?signature=SIGNATURE&timestamp=TIMESTAMP&key=KEY
+```
 
+request parameters:
+```
 signature - a string that will be matched on the api server. generate like this: Digest::SHA1.hexdigest(TIMESTAMP.to_s, PRIVATE_TOKEN)
+```
+```
 timestamp - a timestamp that is generated on the request server. generate like this: Time.now
+```
+```
 key - what you will use to find the authenticating record on the api server. generate on api server like this: Sesame.generate_key
-
 ```
 
 
