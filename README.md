@@ -12,11 +12,11 @@ And then execute:
 
     $ bundle
 
-## Usage
-
-### Terms
+## Terms
 * request server - server making the api request
 * api server - server receiving the api request. should contain an authenticating record.
+
+## Usage
 
 You will need to set up an authenticating record in the app you want to hit and add two things to it:
 * key - this is public. it can be generated like this: `Sesame.generate_key`
