@@ -8,6 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Sesame::VERSION
   spec.authors       = ["Tim"]
   spec.email         = ["thogg4@gmail.com"]
+  spec.description   = ''
+  spec.summary   = ''
   spec.homepage      = "https://github.com/deseretbook/sesame"
   spec.license       = "MIT"
 
