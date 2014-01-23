@@ -29,7 +29,7 @@ http://apihost.com/endpoint?signature=SIGNATURE&timestamp=TIMESTAMP&key=KEY
 
 request parameters:
 ```
-signature - a string that will be matched on the api server. generate like this: Digest::SHA1.hexdigest(TIMESTAMP.to_s, PRIVATE_TOKEN)
+signature - a string that will be matched on the api server. generate like this: Digest::SHA1.hexdigest(TIMESTAMP.to_s + PRIVATE_TOKEN)
 ```
 ```
 timestamp - a timestamp that is generated on the request server. generate like this: Time.now
