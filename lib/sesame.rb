@@ -16,13 +16,13 @@ module Sesame
 
     def authenticate_request(signature, timestamp, token)
       raise ArgumentError, 'all arguments must have a value' if !signature || !timestamp || !token
-      raise RequestError, 'stale request' if (Time.now.to_i - timestamp.to_i) > 600
+      raise RequestError, "stale request #{Time.now.to_i} - #{timestamp.to_i}" if (Time.now.to_i - timestamp.to_i) > 600
       raise RequestError, 'invalid signature' if !self.valid_signature?(signature, timestamp, token)
       true
     end
 
     def valid_signature?(signature, timestamp, token)
-      signature.downcase == Digest::SHA1.hexdigest(timestamp.to_s + token)
+      signature.downcase == Digest::SHA1.hexdigest(timestamp.to_i.to_s + token)
     end
 
   end
