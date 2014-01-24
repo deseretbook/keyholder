@@ -1,8 +1,8 @@
-require 'sesame/version'
-require 'sesame/errors'
+require 'keyholder/version'
+require 'keyholder/errors'
 require 'digest/sha1'
 
-module Sesame
+module Keyholder
   class << self
     NONSENSE = '552233432sdffsdsdeseretbookisgreat'
     

@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'sesame/version'
+require 'keyholder/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "sesame"
-  spec.version       = Sesame::VERSION
+  spec.name          = "keyholder"
+  spec.version       = Keyholder::VERSION
   spec.authors       = ["Tim"]
   spec.email         = ["thogg4@gmail.com"]
   spec.description   = ''
   spec.summary   = ''
-  spec.homepage      = "https://github.com/deseretbook/sesame"
+  spec.homepage      = "https://github.com/deseretbook/keyholder"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

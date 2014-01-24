@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift './lib'
 
-require 'sesame'
+require 'keyholder'
 
 require 'rubygems'
 require 'spork'

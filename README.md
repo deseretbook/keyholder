@@ -1,4 +1,4 @@
-# Sesame
+# Keyholder
 
 A simple gem to enable our brand of request authentication easily.
 
@@ -6,7 +6,7 @@ A simple gem to enable our brand of request authentication easily.
 
 Add this line to your application's Gemfile:
 
-    gem 'sesame'
+    gem 'keyholder'
 
 And then execute:
 
@@ -38,8 +38,8 @@ key - what you will use to find the authenticating record on the api server. thi
 ## Usage on api server
 
 You will need to set up an authenticating record in the app you want to hit and add two things to it:
-* key - this is public. it can be generated like this: `Sesame.generate_key`
-* token - this should be kept private. it is only sent when encrypted. it can be generated like this: `Sesame.generate_token`
+* key - this is public. it can be generated like this: `Keyholder.generate_key`
+* token - this should be kept private. it is only sent when encrypted. it can be generated like this: `Keyholder.generate_token`
 
 First verify the key is correct by finding the authenticating record on the api server:
 ```
@@ -49,7 +49,7 @@ halt if !record
 
 Next authenticate the request using the timestamp and signature:
 ```
-Sesame.authenticate_request(params[:signature], params[:timestamp], record.token)
+Keyholder.authenticate_request(params[:signature], params[:timestamp], record.token)
 ```
 
 
