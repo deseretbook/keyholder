@@ -48,8 +48,13 @@ halt if !record
 ```
 
 Next authenticate the request using the timestamp and signature:
+(You will need to catch errors here)
 ```
-Keyholder.authenticate_request(params[:signature], params[:timestamp], record.token)
+begin
+  Keyholder.authenticate_request(params[:signature], params[:timestamp], record.token)
+rescue => e
+  halt 401, e.message
+end
 ```
 
 
